@@ -35,7 +35,7 @@
           <h2>Skills</h2>
           <xsl:for-each select="skill[generate-id() = generate-id(key('skill-by-category', category)[1])]">
             <xsl:sort select="category" />
-            <div class="skill-category">
+            <div class="skill-category clearfix">
               <div><h3>
                 <xsl:value-of select="category" />
               </h3></div>
