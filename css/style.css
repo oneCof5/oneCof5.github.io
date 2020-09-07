@@ -61,7 +61,6 @@ h1, h2, h3 {
 
 h2 {
   font-size: 1.15em;
-  margin: 1em 0 1em .25in;
 }
 
 h3 {
@@ -76,20 +75,26 @@ h3 {
 
 .left-rail {
   background-color: rgba(var(--color-background-4), 1);
-  width: 2.5in;
+  min-width: 200px;
   position: relative;
   font-size: 0.85rem;
+  max-width: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .main {
-  width: 5.5in;
-  flex: 5.5in;
+  min-width: 400px;
+  max-width: 1200px;
+  flex-grow: 1;
+  margin-left: 40px;
 }
 
 /* Heading */
 .profile {
   text-align: center;
   height: var(--heading-height);
+  margin: 40px 20px;
 }
 
 .profile-photo {
@@ -105,12 +110,12 @@ h3 {
   display: flex;
   flex-direction: column;
   height: var(--heading-height);
+  margin: 40px 20px;
 }
 
 .heading h2 {
-  font-weight: 300;
-  font-size: 20pt;
-  margin: 0;
+  font-weight: normal;
+  font-size: 1.4em;
 }
 
 h2::after {
@@ -118,7 +123,7 @@ h2::after {
   content: "";
   border-bottom: .2rem solid rgba(var(--color-foreground-2), 1);
   width: 100%;
-  transform: translateY(0.5em);
+  transform: translateY(-0.2em);
 }
 
 .heading h2::after {
@@ -126,7 +131,6 @@ h2::after {
 }
 
 .contacts {
-  margin-left: .25in;
   display: flex;
   flex-direction: column;
 }
@@ -138,19 +142,18 @@ h2::after {
 .contact {
   display: flex;
   flex-direction: row;
-  padding: 0 0 0.85em 0;
+  padding: 6px 0;
 }
 
 .icon {
   font-size: 1.5em;
-  vertical-align: middle;
-  vertical-align: -webkit-baseline-middle;
-  flex: 1 0 0.375in;
-  max-width: 0.375in;
+  vertical-align: text-bottom;
+  width: 40px;
 }
 
 .certification img {
   height: 80px;
+  width: 80px;
 }
 
 .cert-info {
@@ -160,17 +163,14 @@ h2::after {
 
 .certification {
   display: flex;
-  margin: 6px;
+  padding: 6px 0;
+  margin-left: -14px;
 }
 
 .skill-category {
-  margin: 0 0 0 .25in;
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   padding: 0 2px;
-  /* flex-direction: row-reverse; */
-  /* max-height: 124px; */
 }
 
 .skill-category h3 {
@@ -181,8 +181,7 @@ h2::after {
 }
 
 .skill {
-  padding: 0 1.5em .5em 0px;
-  /* text-align: center; */
+  margin: 0 20px 2px 0px;
 }
 
 .skill-category div:first-child {
@@ -191,9 +190,7 @@ h2::after {
 
 .job-heading {
   display: flex;
-  flex-wrap: wrap;
   padding: 0 4px;
-  /* vertical-align: top; */
 }
 
 .title {
@@ -202,8 +199,8 @@ h2::after {
 }
 
 .date {
-  flex: 1 0 1.425in;
-  max-width: 1.425in;
+  min-width: 80px;
+  max-width: 160px;
   padding: 0 4px;
 }
 
@@ -220,7 +217,7 @@ h1, h2 {
   content: "";
   position: relative;
   width: 1px;
-  height: 16px;
+  height: 14px;
   top: 4px;
   left: 16px;
   border-left: 2px solid rgba(var(--color-foreground-2), 1);
@@ -249,7 +246,7 @@ h1, h2 {
 
 .job {
   position: relative;
-  height: max-content;
+  margin-top: 12px;
 }
 
 .section-heading title {
@@ -259,25 +256,25 @@ h1, h2 {
 
 .section-heading {
   display: flex;
-  margin: 1em 2em 0 1em;
 }
 
 .section-heading-title {
-  flex: 1 0 3.25in;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .section-heading-title h2 {
-  margin: 0 0 1em .25in;
+  /* margin: 0 0 1em .25in; */
 }
 
 .company-location {
-  margin: 0 .25in 0 0.5in;
+  padding: 0 50px;
   display: flex;
 }
 
 .company {
-  flex: 1 0 65%;
-  min-width: 65%;
+  min-width: 400px;
+  flex-grow: 1;
 }
 
 .company-location .icon {
@@ -285,13 +282,12 @@ h1, h2 {
 }
 
 .accomplishments {
-  margin: 0 0 0 0.25in;
+  padding: 0 30px;
 }
 
 .company-location .contact {
-  padding: 0;
-  flex: 1 0 35%;
-  max-width: 35%;
+  width: 200px;
+  text-align: right;
 }
 
 .job:last-child {
@@ -300,4 +296,8 @@ h1, h2 {
 
 .job:only-child {
   margin-bottom: 0;
+}
+
+.info, .certifications, .skills {
+  padding: 8px 20px 20px 20px;
 }
