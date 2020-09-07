@@ -25,7 +25,7 @@ body {
 
 /* font awesome */
 .fas, .fab, .far {
-  padding-right: 0.85em;
+  padding-right: 14pt;
 }
 
 h1 {
@@ -58,7 +58,7 @@ h1, h2, h3 {
 
 .left-rail h2 {
   font-size: 13pt;
-  /* margin: 1em 0 1em .25in; */
+  margin: 0 0 12px 0;
 }
 
 h3 {
@@ -110,9 +110,9 @@ h3 {
 h2::after {
   display: inline-block;
   content: "";
-  border-bottom: .2rem solid #000;
+  border-bottom: 2px solid #000;
   width: 100%;
-  transform: translateY(0.5em);
+  transform: translateY(-.25em);
 }
 
 .heading h2::after {
@@ -120,25 +120,25 @@ h2::after {
 }
 
 .contacts {
-  padding: .25in 0;
+  position: relative;
 }
 
 .contact {
   /* display: flex; */
   /* flex-direction: row; */
-  padding: 0 0 12pt;
+  padding-bottom: 6pt;
 }
 
 .contact .contact-details {
     float: left;
-    width: 2in;
+    width: 1.75in;
 }
 
 .icon {
   font-size: 18pt;
   vertical-align: middle;
   vertical-align: -webkit-baseline-middle;
-  /* display: inline-block; */
+  width: 0.5in;
   float: left;
 }
 
@@ -153,11 +153,11 @@ h2::after {
 
 .certification {
   display: flex;
-  margin: 6px;
+  margin-bottom: 6pt;
 }
 
 .skill-category {
-  margin: 0 0 0 .25in;
+  margin-bottom: 6pt;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -165,14 +165,16 @@ h2::after {
 }
 
 .skill-category h3 {
-  margin: 0.5em 0;
+  /* margin-top: 6pt; */
+  /* padding-bottom: 2pt; */
   letter-spacing: normal;
   font-weight: normal;
   font-style: italic;
 }
 
 .skill {
-  padding: 0 1.5em .5em 0px;
+  padding-right: 12pt;
+  font-size: 11pt;
 }
 
 .skill-category div:first-child {
@@ -180,14 +182,13 @@ h2::after {
 }
 
 .job-heading {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  display: block;
+  position: relative;
   margin: 0 .25in 0 0;
 }
 
 .title {
   float: left;
-  /* padding: 0 4px; */
 }
 
 .date {
@@ -206,30 +207,28 @@ h1, h2 {
   letter-spacing: 2px;
 }
 
+/* top section of the timeline vertical line */
 .job::before {
   content: "";
   position: relative;
   width: 1px;
   height: 16px;
-  top: 1px;
+  top: 4px;
   left: 0.125in;
   border-left: 2px solid #000;
   z-index: -1;
 }
 
+/* bottom section of the timeline vertical line */
 .job::after {
   content: "";
   position: absolute;
   width: 1px;
-  top: 40px;
+  top: 42px;
   bottom: -20px;
   left: .125in;
   border-left: 2px solid #000;
   z-index: -1;
-}
-
-.job:last-child::after {
-  border-left: none;
 }
 
 .job-history {
@@ -243,22 +242,38 @@ h1, h2 {
   break-inside: avoid;
 }
 
+.job:only-child {
+  margin-bottom: 0;
+}
+
+.job:last-child {
+  margin-bottom: 0.5in;
+}
+
+.job:last-child::after {
+  border-left: none;
+}
+
+.job-heading .date {
+  font-weight: bold;
+}
+
 .section-heading title {
   margin: 0;
 }
 
 .section-heading {
-  display: block;
+  position: relative;
   margin: 0 0.25in;
 }
 
 .section-heading-title {
   float: left;
-  width: 4.75in;
+  width: 3.75in;
 }
 
 .company-location {
-  margin: 0 .25in 0 0.5in;
+  margin: 0 0 0 0.5in;
 }
 
 .company {
@@ -276,16 +291,4 @@ h1, h2 {
 .company-location .contact {
   padding: 0;
   float: right;
-}
-
-.job:last-child {
-  margin-bottom: 0.5in;
-}
-
-.job:only-child {
-  margin-bottom: 0;
-}
-
-.job-heading .date {
-  font-weight: bold;
 }
