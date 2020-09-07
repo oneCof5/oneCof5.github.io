@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="resume.xsl"?>
+<resume>
+
+  <!-- Person -->
+  <person name="Chris Pearson" title="Scrum Master">
+    <address>
+      <line>3072 Glen Valley Drive</line>
+      <city>Crozet</city>
+      <state>VA</state>
+      <zip>22932</zip>
+    </address>
+    <contacts>
+      <contact type="phone">+1 317.750.0439</contact>
+      <contact type="email">chris@intenlux.com</contact>
+      <contact type="linkedin">pearsonc</contact>
+      <contact type="github">oneCof5</contact>
+    </contacts>
+    <summary>Combining traditional Project Management with an Agile mindet to create uniquely tailored collaborative solutions that exceed client needs.</summary>
+  </person>
+
+  <!-- Work History and Experience -->
+  <job title="Solutions Engineer">
+    <employer name="Silverchair">
+      <address>
+        <line>316 E. Main St, Suite 300</line>
+        <city>Charlottesville</city>
+        <state>VA</state>
+        <zip>22902</zip>
+      </address>
+      <contacts>
+        <contact type="phone">434-296-6333</contact>
+        <contact type="www">www.silverchair.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2019" month="12"/>
+    </period>
+    <duties>
+      <duty>Develop optimized Silverchair software solutions tailored to a client’s needs. Identify and refine client requirements and desires. Lead technical solution demonstrations. Prepare sales proposals. Close sales and facilitate transition to
+        implementation teams.</duty>
+      <duty>Manage internal cross-functional collaboration efforts, ensuring alignment between executive, product management, sales, and delivery teams.</duty>
+      <duty>Champion Agile transformation of sales process, increasing transparency and soliciting feedback among internal stakeholders.</duty>
+    </duties>
+  </job>
+  <job title="Scrum Master">
+    <employer name="Silverchair">
+      <address>
+        <line>316 E. Main St, Suite 300</line>
+        <city>Charlottesville</city>
+        <state>VA</state>
+        <zip>22902</zip>
+      </address>
+      <contacts>
+        <contact type="phone">434-296-6333</contact>
+        <contact type="www">www.silverchair.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2016" month="08"/>
+      <to year="2019" month="12"/>
+    </period>
+    <duties>
+      <duty>Servant leader to multiple software development teams. Facilitated Scrum ceremonies. Removed obstacles blocking progress of goals and commitments. Compiled and communicated metrics enabling empirical inspection and adaptation.</duty>
+      <duty>Promoted Agile practices outside development teams; served as an internal Agile Coach.</duty>
+      <duty>Facilitated Silverchair Scrum Master Community of Practice.</duty>
+      <duty>Provided Jira and Confluence software administration.</duty>
+      <duty>Performed Release Train Engineer duties. Planned and facilitated company-wide quarterly Scaled Agile Framework Program Implement Planning sessions.</duty>
+      <duty>Recognized with Spotlight Award, 2nd quarter 2018.</duty>
+    </duties>
+  </job>
+  <job title="IT Project Manager">
+    <employer name="BCforward">
+      <address>
+        <line>9777 N College Ave</line>
+        <city>Indianapolis</city>
+        <state>IN</state>
+        <zip>46280</zip>
+      </address>
+      <contacts>
+        <contact type="phone">317-493-2000</contact>
+        <contact type="www">www.bcforward.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2016" month="03"/>
+      <to year="2016" month="08"/>
+    </period>
+    <duties>
+      <duty>Provided full range project management services on concurrent software development projects under contract to Eli Lilly and Company.</duty>
+      <duty>Pioneered Agile transformation via hybrid (Scrum and critical chain) project management approach to software development projects.</duty>
+    </duties>
+  </job>
+  <job title="Project Manager">
+    <employer name="Infor">
+      <address>
+        <line>641 Avenue of the Americas</line>
+        <city>New York</city>
+        <state>NY</state>
+        <zip>10011</zip>
+      </address>
+      <contacts>
+        <contact type="phone">646-336-1700</contact>
+        <contact type="www">www.infor.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2006" month="06"/>
+      <to year="2016" month="03"/>
+    </period>
+    <duties>
+      <duty>Led multiple concurrent ERP software implementation projects for industrial clients.</duty>
+      <duty>Managed project budgets and costs ranging from $50K to $5M.</duty>
+      <duty>Planned, executed, monitored and controlled project tasks and schedules.</duty>
+      <duty>Identified and monitored project risks and contingency plans.</duty>
+      <duty>Delivered consistent communication updates to project stakeholders (internal and external).</duty>
+      <duty>Introduced iterative “rolling wave” integration development within projects.</duty>
+    </duties>
+  </job>
+  <job title="Director, Professional Services">
+    <employer name="Infor">
+      <address>
+        <line>641 Avenue of the Americas</line>
+        <city>New York</city>
+        <state>NY</state>
+        <zip>10011</zip>
+      </address>
+      <contacts>
+        <contact type="phone">646-336-1700</contact>
+        <contact type="www">www.infor.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2003" month="10"/>
+      <to year="2006" month="06"/>
+    </period>
+    <duties>
+      <duty>Managed professional services team with $1M in annual revenues in the Automotive group.</duty>
+      <duty>Implemented post-go live audit programs with clients, increasing software adoption, reducing service calls, and increasing customer satisfaction.</duty>
+      <duty>Partnered with the sales team to create optimized consulting services options for clients.</duty>
+      <duty>Provided direct consulting services (project management and integration and functional consulting) in addition to management responsibilities.</duty>
+      <duty>Merger with SSA Global in June 2006 eliminated this position.</duty>
+    </duties>
+  </job>
+  <job title="Project Manager">
+    <employer name="Infor">
+      <address>
+        <line>641 Avenue of the Americas</line>
+        <city>New York</city>
+        <state>NY</state>
+        <zip>10011</zip>
+      </address>
+      <contacts>
+        <contact type="phone">646-336-1700</contact>
+        <contact type="www">www.infor.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2001" month="02"/>
+      <to year="2003" month="10"/>
+    </period>
+    <duties>
+      <duty>Performed Project Management services for automotive supply chain implementation projects.</duty>
+      <duty>Delivered functional application consulting, process mapping and education services.</duty>
+      <duty>Designed, developed, tested and deployed custom integration solutions with legacy systems.</duty>
+    </duties>
+  </job>
+  <job title="Program Manager">
+    <employer name="NCI Information Systems">
+      <address>
+        <line>11730 Plaza American Dr</line>
+        <city>Reston</city>
+        <state>VA</state>
+        <zip>20190</zip>
+      </address>
+      <contacts>
+        <contact type="phone">703-707-6900</contact>
+        <contact type="www">www.nciinc.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <to year="2001" month="02"/>
+      <from year="1999" month="11"/>
+    </period>
+    <duties>
+      <duty>Directed $30M development, support and implementation projects for a proprietary e-commerce software development program under the US Department of Defense, Defense Logistics Agency.</duty>
+      <duty>Implemented global help desk call centers in the US, Germany, and Japan.</duty>
+    </duties>
+  </job>
+  <job title="Project Manager">
+    <employer name="NCI Information Systems">
+      <address>
+        <line>11730 Plaza American Dr</line>
+        <city>Reston</city>
+        <state>VA</state>
+        <zip>20190</zip>
+      </address>
+      <contacts>
+        <contact type="phone">703-707-6900</contact>
+        <contact type="www">www.nciinc.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <to year="1999" month="11"/>
+      <from year="1998" month="07"/>
+    </period>
+    <duties>
+      <duty>Planned and executed a global software implementation project, successfully deploying 570 sites in less than sixteen months.</duty>
+      <duty>Grew project implementation staff from 2 to 80 employees. Designed and executed new hire on-boarding orientation and education.</duty>
+    </duties>
+  </job>
+  <job title="Technical Writer &amp; Educator">
+    <employer name="NCI Information Systems">
+      <address>
+        <line>11730 Plaza American Dr</line>
+        <city>Reston</city>
+        <state>VA</state>
+        <zip>20190</zip>
+      </address>
+      <contacts>
+        <contact type="phone">703-707-6900</contact>
+        <contact type="www">www.nciinc.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="1997" month="11"/>
+      <to year="1998" month="07"/>
+    </period>
+    <duties>
+      <duty>Created application-specific documentation (help and user manual) for custom software.</duty>
+      <duty>Facilitated stakeholder acceptance testing and sign off with each US military branch.</duty>
+    </duties>
+  </job>
+
+  <!-- Certifications -->
+  <certification name="Professional Scrum Product Owner (PSPO-I)">
+    <issuer name="Scrum.org"/>
+    <period>
+      <to year="2019" month="08"/>
+    </period>
+    <badge>
+      <url>https://api.badgr.io/public/assertions/FUKyhttdSlSueS_HRLbHCg?identity__email=chris%40intenlux.com</url>
+      <icon>https://media.badgr.com/uploads/badges/uploads/badges/b88d580be3515872e0a67110ef890c62.png</icon>
+      <badgr-badge><![CDATA[
+        <blockquote class="badgr-badge" style="font-family: Helvetica, Roboto, &quot;Segoe UI&quot;, Calibri, sans-serif;"><a href="https://api.badgr.io/public/assertions/FUKyhttdSlSueS_HRLbHCg?identity__email=chris%40intenlux.com"><img width="120px" height="120px" src="https://media.badgr.com/uploads/badges/uploads/badges/b88d580be3515872e0a67110ef890c62.png"></a><p style="margin: 16px 0; padding: 0;"><a class="badgr-badge-verify" target="_blank" href="https://badgecheck.io?url=https%3A%2F%2Fapi.badgr.io%2Fpublic%2Fassertions%2FFUKyhttdSlSueS_HRLbHCg%3Fidentity__email%3Dchris%2540intenlux.com&amp;identity__email=chris%40intenlux.com" style="box-sizing: content-box; display: flex; align-items: center; justify-content: center; margin: 0; font-size:14px; font-weight: bold; width: 48px; height: 16px; border-radius: 4px; border: solid 1px black; text-decoration: none; padding: 6px 16px; margin: 16px 0; color: black;">VERIFY</a></p><script async="async" src="https://badgr.com/assets/widgets.bundle.js"></script></blockquote>
+        ]]></badgr-badge>
+    </badge>
+  </certification>
+  <certification name="Professional Scrum Master (PSM-I)">
+    <issuer name="Scrum.org"/>
+    <period>
+      <to year="2018" month="08"/>
+    </period>
+    <badge>
+      <url>https://api.badgr.io/public/assertions/E3xig5WxRG6j9_dMgkwLtw?identity__email=chris%40intenlux.com</url>
+      <icon>https://media.badgr.com/uploads/badges/uploads/badges/df345ab1058e53fb81618155669a06ff.png</icon>
+      <badgr-badge><![CDATA[
+        <blockquote class="badgr-badge" style="font-family: Helvetica, Roboto, &quot;Segoe UI&quot;, Calibri, sans-serif;"><a href="https://api.badgr.io/public/assertions/E3xig5WxRG6j9_dMgkwLtw?identity__email=chris%40intenlux.com"><img width="120px" height="120px" src="https://media.badgr.com/uploads/badges/uploads/badges/df345ab1058e53fb81618155669a06ff.png"></a><p style="margin: 16px 0; padding: 0;"><a class="badgr-badge-verify" target="_blank" href="https://badgecheck.io?url=https%3A%2F%2Fapi.badgr.io%2Fpublic%2Fassertions%2FE3xig5WxRG6j9_dMgkwLtw%3Fidentity__email%3Dchris%2540intenlux.com&amp;identity__email=chris%40intenlux.com" style="box-sizing: content-box; display: flex; align-items: center; justify-content: center; margin: 0; font-size:14px; font-weight: bold; width: 48px; height: 16px; border-radius: 4px; border: solid 1px black; text-decoration: none; padding: 6px 16px; margin: 16px 0; color: black;">VERIFY</a></p><script async="async" src="https://badgr.com/assets/widgets.bundle.js"></script></blockquote>
+        ]]></badgr-badge>
+    </badge>
+  </certification>
+
+  <!-- Education -->
+  <degree name="Bachelor of Arts">
+    <institution name="University of Pennsylvania">
+      <address>
+        <city>Philadelphia</city>
+        <state>PA</state>
+      </address>
+      <contacts>
+        <contact type="www">www.upenn.edu</contact>
+      </contacts>
+    </institution>
+    <period>
+      <to year="1994" month="05"/>
+    </period>
+    <major>English &amp; Political Science (Dual Major)</major>
+  </degree>
+
+  <!-- Skills -->
+  <!-- Industry Knowledge -->
+  <skill name="Scrum">
+    <category>Industry Knowledge</category>
+    <level>5</level>
+  </skill>
+  <skill name="Project Management">
+    <category>Industry Knowledge</category>
+    <level>5</level>
+  </skill>
+  <skill name="Software Implementation">
+    <category>Industry Knowledge</category>
+    <level>5</level>
+  </skill>
+  <skill name="Agile Methodologies">
+    <category>Industry Knowledge</category>
+    <level>5</level>
+  </skill>
+  <skill name="Scaled Agile Framework">
+    <category>Industry Knowledge</category>
+    <level>4</level>
+  </skill>
+  <!-- Tools -->
+  <skill name="Jira">
+    <category>Tools</category>
+    <level>5</level>
+  </skill>
+  <skill name="Confluence">
+    <category>Tools</category>
+    <level>5</level>
+  </skill>
+  <skill name="Microsoft Project">
+    <category>Tools</category>
+    <level>5</level>
+  </skill>
+  <skill name="Microsoft Office">
+    <category>Tools</category>
+    <level>5</level>
+  </skill>
+  <skill name="Microsoft PowerBI">
+    <category>Tools</category>
+    <level>5</level>
+  </skill>
+  <!-- Technology -->
+  <skill name="XML">
+    <category>Technology</category>
+    <level>5</level>
+  </skill>
+  <skill name="XSLT">
+    <category>Technology</category>
+    <level>4</level>
+  </skill>
+  <skill name="CSS">
+    <category>Technology</category>
+    <level>3</level>
+  </skill>
+  <skill name="SQL">
+    <category>Technology</category>
+    <level>3</level>
+  </skill>
+  <skill name="Visual Basic for Applications (VBA)">
+    <category>Technology</category>
+    <level>4</level>
+  </skill>
+</resume>

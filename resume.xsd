@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="oneCof5" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="Contact">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string">
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="Contacts">
+    <xs:sequence>
+      <xs:element name="contact" type="Contact" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="line" type="xs:string" minOccurs="0" maxOccurs="3"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="state" type="xs:string"/>
+      <xs:element name="zip" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Year">
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Month">
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="[0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="YearMonth">
+    <xs:attribute name="year" type="Year" use="required"/>
+    <xs:attribute name="month" type="Month" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Period">
+    <xs:all>
+      <xs:element name="from" type="YearMonth" minOccurs="0"/>
+      <xs:element name="to" type="YearMonth" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="Person">
+    <xs:all>
+      <xs:element name="address" type="Address"/>
+      <xs:element name="contacts" type="Contacts"/>
+      <xs:element name="summary" type="xs:string" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Duties">
+    <xs:sequence>
+      <xs:element name="duty" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Employer">
+    <xs:sequence>
+      <xs:element name="address" type="Address"/>
+      <xs:element name="contacts" type="Contacts"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Job">
+    <xs:all>
+      <xs:element name="employer" type="Employer"/>
+      <xs:element name="address" type="Address" minOccurs="0"/>
+      <xs:element name="period" type="Period"/>
+      <xs:element name="duties" type="Duties"/>
+    </xs:all>
+    <xs:attribute name="title" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Certification">
+    <xs:all>
+      <xs:element name="issuer" type="Issuer"/>
+      <xs:element name="period" type="Period" minOccurs="0"/>
+      <xs:element name="badge" type="xs:string" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Issuer">
+    <xs:sequence>
+      <xs:element name="address" type="Address" minOccurs="0"/>
+      <xs:element name="contacts" type="Contacts" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Degree">
+    <xs:sequence>
+      <xs:element name="institution" type="Institution"/>
+      <xs:element name="period" type="Period"/>
+      <xs:element name="major" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Institution">
+    <xs:sequence>
+      <xs:element name="address" type="Address" minOccurs="0"/>
+      <xs:element name="contacts" type="Contacts" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Skill">
+    <xs:all>
+      <xs:element name="category" type="xs:string"/>
+      <xs:element name="level" type="xs:int"/>
+    </xs:all>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Resume">
+    <xs:all>
+      <xs:element name="person" type="Person"/>
+      <xs:element name="job" type="Job" maxOccurs="unbounded"/>
+      <xs:element name="certification" type="Certification" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="degree" type="Degree" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="skill" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="resume" type="Resume"/>
+</xs:schema>

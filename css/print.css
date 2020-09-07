@@ -1,0 +1,291 @@
+:root {
+  --font-family-headings: 'Open Sans', sans-serif;
+  --font-family-body: 'Open Sans', sans-serif;
+  --heading-height: 1.5in;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  background-color: #fff;
+  font-size: 12pt;
+  font-family: var(--font-family-body);
+}
+
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* font awesome */
+.fas, .fab, .far {
+  padding-right: 0.85em;
+}
+
+h1 {
+  font-size: 36pt;
+}
+
+h2 {
+  font-size: 14pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+a {
+  color: #000;
+  text-decoration: none
+}
+
+/* Define the heading sizes */
+h1, h2, h3 {
+  font-family: var(--font-family-headings);
+  margin: 0;
+}
+
+.heading h1 {
+  font-size: 36pt;
+  margin: 28px 2px -4px 2px;
+}
+
+.left-rail h2 {
+  font-size: 13pt;
+  /* margin: 1em 0 1em .25in; */
+}
+
+h3 {
+  font-size: 1em;
+}
+
+/* Layout */
+.page {
+  display: flex;
+  position: relative;
+}
+
+.left-rail {
+  width: 2.5in;
+  position: relative;
+  margin: 0;
+}
+
+.main {
+  width: 5.5in;
+  flex: 5.5in;
+}
+
+/* Heading */
+.profile {
+  text-align: center;
+  height: var(--heading-height);
+}
+
+.profile-photo {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: var(--heading-height);
+}
+
+.heading h2 {
+  font-weight: 300;
+  font-size: 20pt;
+  margin: 0;
+}
+
+h2::after {
+  display: inline-block;
+  content: "";
+  border-bottom: .2rem solid #000;
+  width: 100%;
+  transform: translateY(0.5em);
+}
+
+.heading h2::after {
+  border: none;
+}
+
+.contacts {
+  padding: .25in 0;
+}
+
+.contact {
+  /* display: flex; */
+  /* flex-direction: row; */
+  padding: 0 0 12pt;
+}
+
+.contact .contact-details {
+    float: left;
+    width: 2in;
+}
+
+.icon {
+  font-size: 18pt;
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
+  /* display: inline-block; */
+  float: left;
+}
+
+.certification img {
+  height: 80px;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.certification {
+  display: flex;
+  margin: 6px;
+}
+
+.skill-category {
+  margin: 0 0 0 .25in;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2px;
+}
+
+.skill-category h3 {
+  margin: 0.5em 0;
+  letter-spacing: normal;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.skill {
+  padding: 0 1.5em .5em 0px;
+}
+
+.skill-category div:first-child {
+  width: 100%;
+}
+
+.job-heading {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin: 0 .25in 0 0;
+}
+
+.title {
+  float: left;
+  /* padding: 0 4px; */
+}
+
+.date {
+  width: max-content;
+  float: left;
+  padding: 0 12pt 0 0;
+  vertical-align: bottom;
+}
+
+.date span:nth-child(2)::before {
+  content: " - ";
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.job::before {
+  content: "";
+  position: relative;
+  width: 1px;
+  height: 16px;
+  top: 1px;
+  left: 0.125in;
+  border-left: 2px solid #000;
+  z-index: -1;
+}
+
+.job::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 40px;
+  bottom: -20px;
+  left: .125in;
+  border-left: 2px solid #000;
+  z-index: -1;
+}
+
+.job:last-child::after {
+  border-left: none;
+}
+
+.job-history {
+  position: relative;
+  margin-left: 0.125in;
+}
+
+.job {
+  position: relative;
+  margin: 0 .25in .125in .125in;
+  break-inside: avoid;
+}
+
+.section-heading title {
+  margin: 0;
+}
+
+.section-heading {
+  display: block;
+  margin: 0 0.25in;
+}
+
+.section-heading-title {
+  float: left;
+  width: 4.75in;
+}
+
+.company-location {
+  margin: 0 .25in 0 0.5in;
+}
+
+.company {
+  float: left;
+}
+
+.company-location .icon {
+  font-size: 1em;
+}
+
+.accomplishments {
+  margin: 0 0 0 0.25in;
+}
+
+.company-location .contact {
+  padding: 0;
+  float: right;
+}
+
+.job:last-child {
+  margin-bottom: 0.5in;
+}
+
+.job:only-child {
+  margin-bottom: 0;
+}
+
+.job-heading .date {
+  font-weight: bold;
+}
