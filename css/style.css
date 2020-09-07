@@ -231,7 +231,7 @@ h1, h2 {
   content: "";
   position: absolute;
   width: 1px;
-  top: 40px;
+  top: 48px;
   bottom: -20px;
   left: 16px;
   border-left: 2px solid rgba(var(--color-foreground-2), 1);
