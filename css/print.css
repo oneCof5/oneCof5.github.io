@@ -28,6 +28,17 @@ body {
   padding-right: 14pt;
 }
 
+/* Define the headings */
+h1, h2, h3 {
+  font-family: var(--font-family-headings);
+  margin: 0;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 h1 {
   font-size: 36pt;
 }
@@ -35,34 +46,30 @@ h1 {
 h2 {
   font-size: 14pt;
 }
-
-h3 {
-  font-size: 14pt;
+/* underline h2's */
+h2::after {
+  display: inline-block;
+  content: "";
+  border-bottom: 2px solid #000;
+  width: 100%;
+  transform: translateY(-4px);
 }
 
+h3 {
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: normal;
+}
+
+/* style links */
 a {
   color: #000;
   text-decoration: none
 }
 
-/* Define the heading sizes */
-h1, h2, h3 {
-  font-family: var(--font-family-headings);
-  margin: 0;
-}
-
-.heading h1 {
-  font-size: 36pt;
-  margin: 28px 2px -4px 2px;
-}
-
 .left-rail h2 {
   font-size: 13pt;
-  margin: 0 0 12px 0;
-}
-
-h3 {
-  font-size: 1em;
 }
 
 /* Layout */
@@ -80,6 +87,20 @@ h3 {
 .main {
   width: 5.5in;
   flex: 5.5in;
+}
+
+.section-heading title {
+  margin: 0;
+}
+
+.section-heading {
+  display: block;
+  margin-left: 0.25in;
+}
+
+.section-heading-title {
+  float: left;
+  width: 4.25in;
 }
 
 /* Heading */
@@ -101,49 +122,32 @@ h3 {
   height: var(--heading-height);
 }
 
-.heading h2 {
-  font-weight: 300;
-  font-size: 20pt;
-  margin: 0;
+.heading h1 {
+  margin: 28px 2px -4px 2px;
 }
 
-h2::after {
-  display: inline-block;
-  content: "";
-  border-bottom: 2px solid #000;
-  width: 100%;
-  transform: translateY(-.25em);
+.heading h2 {
+  font-weight: normal;
 }
 
 .heading h2::after {
   border: none;
 }
 
-.contacts {
-  position: relative;
-}
-
 .contact {
-  /* display: flex; */
-  /* flex-direction: row; */
   padding-bottom: 6pt;
 }
 
 .contact .contact-details {
-    float: left;
-    width: 1.75in;
+  float: left;
+  width: 1.85in;
 }
 
 .icon {
   font-size: 18pt;
   vertical-align: middle;
   vertical-align: -webkit-baseline-middle;
-  width: 0.5in;
   float: left;
-}
-
-.certification img {
-  height: 80px;
 }
 
 .cert-info {
@@ -156,39 +160,32 @@ h2::after {
   margin-bottom: 6pt;
 }
 
+.certification img {
+  height: 80px;
+}
+
 .skill-category {
-  margin-bottom: 6pt;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 2px;
-}
-
-.skill-category h3 {
-  /* margin-top: 6pt; */
-  /* padding-bottom: 2pt; */
-  letter-spacing: normal;
-  font-weight: normal;
-  font-style: italic;
-}
-
-.skill {
-  padding-right: 12pt;
+  margin-bottom: 6pt;
   font-size: 11pt;
+}
+
+.skill-category-heading {
+  margin-bottom: 2pt;
 }
 
 .skill-category div:first-child {
   width: 100%;
 }
 
-.job-heading {
-  display: block;
-  position: relative;
-  margin: 0 .25in 0 0;
+.skill {
+  float: left;
+  padding-right: 4pt;
 }
 
 .title {
   float: left;
+  /* padding: 0 4px; */
 }
 
 .date {
@@ -202,12 +199,12 @@ h2::after {
   content: " - ";
 }
 
-h1, h2 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.job {
+  position: relative;
+  margin: 0 .25in .125in .125in;
+  break-inside: avoid;
 }
 
-/* top section of the timeline vertical line */
 .job::before {
   content: "";
   position: relative;
@@ -219,7 +216,6 @@ h1, h2 {
   z-index: -1;
 }
 
-/* bottom section of the timeline vertical line */
 .job::after {
   content: "";
   position: absolute;
@@ -231,49 +227,21 @@ h1, h2 {
   z-index: -1;
 }
 
+.job:last-child::after {
+  border-left: none;
+}
+
+.job-heading {
+  margin: 0 .25in 0 0;
+}
+
 .job-history {
   position: relative;
   margin-left: 0.125in;
 }
 
-.job {
-  position: relative;
-  margin: 0 .25in .125in .125in;
-  break-inside: avoid;
-}
-
-.job:only-child {
-  margin-bottom: 0;
-}
-
-.job:last-child {
-  margin-bottom: 0.5in;
-}
-
-.job:last-child::after {
-  border-left: none;
-}
-
-.job-heading .date {
-  font-weight: bold;
-}
-
-.section-heading title {
-  margin: 0;
-}
-
-.section-heading {
-  position: relative;
-  margin: 0 0.25in;
-}
-
-.section-heading-title {
-  float: left;
-  width: 3.75in;
-}
-
 .company-location {
-  margin: 0 0 0 0.5in;
+  margin: 0 .25in 0 0.5in;
 }
 
 .company {
@@ -291,4 +259,28 @@ h1, h2 {
 .company-location .contact {
   padding: 0;
   float: right;
+}
+
+.job:last-child {
+  margin-bottom: 0.5in;
+}
+
+.job:only-child {
+  margin-bottom: 0;
+}
+
+.job-heading .date {
+  font-weight: bold;
+}
+
+.info, .certifications, .skills {
+  margin-bottom: 0.25in;
+}
+
+.info {
+  margin-top: 3px;
+}
+
+.info .icon {
+  width: 28pt;
 }
