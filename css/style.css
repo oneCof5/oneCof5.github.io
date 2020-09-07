@@ -221,9 +221,8 @@ h1, h2 {
   position: relative;
   width: 1px;
   height: 16px;
-  top: 0px;
-  /* bottom: 2057px; */
-  left: 15px;
+  top: 4px;
+  left: 16px;
   border-left: 2px solid rgba(var(--color-foreground-2), 1);
   z-index: -1;
 }
@@ -233,8 +232,8 @@ h1, h2 {
   position: absolute;
   width: 1px;
   top: 40px;
-  bottom: -15px;
-  left: 15px;
+  bottom: -20px;
+  left: 16px;
   border-left: 2px solid rgba(var(--color-foreground-2), 1);
   z-index: -1;
 }
