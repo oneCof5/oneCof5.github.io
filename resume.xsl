@@ -54,8 +54,8 @@
 
         <!-- name and title -->
         <div class="heading">
-          <h1><xsl:value-of select="person/@name"/></h1>
-          <h2><xsl:value-of select="person/@title"/></h2>
+          <div class="person-name"><h1><xsl:value-of select="person/@name"/></h1></div>
+          <div class="person-title"><xsl:value-of select="person/@title"/></div>
         </div>
 
         <!-- experience -->

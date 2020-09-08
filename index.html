@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!-- https://www.w3schools.com/xml/xsl_client.asp -->
-
 <head>
+  <meta charset="UTF-8">
   <link href="css/normalize.css" rel="stylesheet" type="text/css" />
   <link href="../fa/css/all.css" rel="stylesheet" type="text/css" />
   <link href="css/dark.css" rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" />
@@ -11,42 +10,76 @@
   <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
   <!-- font awesome -->
   <script src="https://use.fontawesome.com/210a870369.js"></script>
-  <script>
-    function loadXMLDoc(filename) {
-      if (window.ActiveXObject) {
-        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-      } else {
-        xhttp = new XMLHttpRequest();
-      }
-      xhttp.open("GET", filename, false);
-      try {
-        xhttp.responseType = "msxml-document"
-      } catch (err) {} // Helping IE11
-      xhttp.send("");
-      return xhttp.responseXML;
-    }
+  <!-- promise -->
+  <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 
-    function displayResult() {
-      xml = loadXMLDoc("resume.xml");
-      xsl = loadXMLDoc("resume.xsl");
-      // code for IE
-      if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
-        ex = xml.transformNode(xsl);
-        document.getElementById("example").innerHTML = ex;
+  <!--
+  Credit where credit's due:  https://github.com/martin-honnen/martin-honnen.github.io/blob/master/xslt/
+  -->
+  <script>
+      function loadDoc(url) {
+           return new Promise(function(resolve) {
+             var req = new XMLHttpRequest();
+             req.open("GET", url);
+             if (typeof XSLTProcessor === 'undefined') {
+               try {
+                 req.responseType = 'msxml-document';
+               }
+               catch (e) {}
+             }
+             req.onload = function() {
+               resolve(this.responseXML)
+             }
+             req.send();
+           });
       }
-      // code for Chrome, Firefox, Opera, etc.
-      else if (document.implementation && document.implementation.createDocument) {
-        xsltProcessor = new XSLTProcessor();
-        xsltProcessor.importStylesheet(xsl);
-        resultDocument = xsltProcessor.transformToFragment(xml, document);
-        document.getElementById("example").appendChild(resultDocument);
+
+      function transform(xmlUrl, xslUrl, xsltParams, targetElement) {
+        Promise.all([loadDoc(xmlUrl), loadDoc(xslUrl)]).then(function(data) {
+          var xmlDoc = data[0];
+          var xslDoc = data[1];
+
+          if (typeof XSLTProcessor !== 'undefined') {
+            var proc = new XSLTProcessor();
+            proc.importStylesheet(xslDoc);
+
+            for (var prop in xsltParams) {
+              proc.setParameter(null, prop, xsltParams[prop]);
+            }
+
+            var resultFrag = proc.transformToFragment(xmlDoc, targetElement.ownerDocument);
+
+            targetElement.textContent = '';
+            targetElement.appendChild(resultFrag);
+          }
+          else {
+              var template = new ActiveXObject('Msxml2.XslTemplate.6.0');
+              template.stylesheet = xslDoc;
+              var proc = template.createProcessor();
+
+              for (var prop in xsltParams) {
+                proc.addParameter(prop, xsltParams[prop]);
+              }
+
+              proc.input = xmlDoc;
+
+              proc.transform();
+
+              var resultHTML = proc.output;
+
+              targetElement.innerHTML = resultHTML;
+          }
+        });
       }
-    }
-  </script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        transform('resume.xml', 'resume.xsl', {}, document.getElementById('resume'));
+      })
+    </script>
 </head>
 
-<body onload="displayResult()">
-  <div id="example" />
+<body>
+  <div id="resume"></div>
 </body>
 
 </html>
