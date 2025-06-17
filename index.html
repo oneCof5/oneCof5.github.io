@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-2328  <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="css/normalize.css" rel="stylesheet" type="text/css" />
   <link href="../fa/css/all.css" rel="stylesheet" type="text/css" />
   <link href="css/dark.css" rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" />
   <link href="css/light.css" rel="stylesheet" type="text/css" media="(prefers-color-scheme: light)" />
@@ -13,94 +13,15 @@
   <script src="https://kit.fontawesome.com/a3dd90e30e.js" crossorigin="anonymous"></script>
   <!-- promise -->
   <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
-
-  <!-- <script>
-      function loadDoc(url) {
-           return new Promise(function(resolve) {
-             var req = new XMLHttpRequest();
-             req.open("GET", url);
-             if (typeof XSLTProcessor === 'undefined') {
-               try {
-                 req.responseType = 'msxml-document';
-               }
-               catch (e) {}
-             }
-             req.onload = function() {
-               resolve(this.responseXML)
-             }
-             req.send();
-           });
-      }
-
-      function transform(xmlUrl, xslUrl, xsltParams, targetElement) {
-        Promise.all([loadDoc(xmlUrl), loadDoc(xslUrl)]).then(function(data) {
-          var xmlDoc = data[0];
-          var xslDoc = data[1];
-
-          if (typeof XSLTProcessor !== 'undefined') {
-            var proc = new XSLTProcessor();
-            proc.importStylesheet(xslDoc);
-
-            for (var prop in xsltParams) {
-              proc.setParameter(null, prop, xsltParams[prop]);
-            }
-
-            var resultFrag = proc.transformToFragment(xmlDoc, targetElement.ownerDocument);
-
-            targetElement.textContent = '';
-            targetElement.appendChild(resultFrag);
-          }
-          else {
-              var template = new ActiveXObject('Msxml2.XslTemplate.6.0');
-              template.stylesheet = xslDoc;
-              var proc = template.createProcessor();
-
-              for (var prop in xsltParams) {
-                proc.addParameter(prop, xsltParams[prop]);
-              }
-
-              proc.input = xmlDoc;
-
-              proc.transform();
-
-              var resultHTML = proc.output;
-
-              targetElement.innerHTML = resultHTML;
-          }
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        transform('resume.xml', 'resume.xsl', {}, document.getElementById('resume'));
-      })
-    </script> -->  
-
+  <!-- NTH -->
+  <script src="https://unpkg.com/xth/xth.min.js"></script>
 
   <script>
-    // Paths to your XML and XSLT files
-    const xmlUrl = 'resume.xml';
-    const xslUrl = 'resume.xsl';
+    var xml = 'resume.xml';
+    var xsl = 'resume.xsl';
 
-    // Fetch XML and XSLT files
-    Promise.all([
-      fetch(xmlUrl).then(r => r.text()),
-      fetch(xslUrl).then(r => r.text())
-    ]).then(([xmlText, xslText]) => {
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(xmlText, "text/xml");
-      const xsl = parser.parseFromString(xslText, "text/xml");
-      // XSLTProcessor is supported in all modern browsers
-      if (window.XSLTProcessor) {
-        const xsltProcessor = new XSLTProcessor();
-        xsltProcessor.importStylesheet(xsl);
-        const resultDocument = xsltProcessor.transformToFragment(xml, document);
-        document.getElementById('result').innerHTML = "";
-        document.getElementById('result').appendChild(resultDocument);
-      } else {
-        document.getElementById('result').innerText = "XSLTProcessor not supported in this browser.";
-      }
-    }).catch(err => {
-      document.getElementById('result').innerText = "Error loading files: " + err;
+    xth(xml, xsl, function(html) {
+      console.log(html);
     });
   </script>
 </head>
