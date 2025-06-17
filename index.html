@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang=""en">
 <head>
   <meta charset="UTF-8">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+2328  <link href="css/normalize.css" rel="stylesheet" type="text/css" />
   <link href="../fa/css/all.css" rel="stylesheet" type="text/css" />
   <link href="css/dark.css" rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" />
   <link href="css/light.css" rel="stylesheet" type="text/css" media="(prefers-color-scheme: light)" />
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
   <!-- font awesome -->
-  <script src="https://use.fontawesome.com/210a870369.js"></script>
+  <script src="https://kit.fontawesome.com/a3dd90e30e.js" crossorigin="anonymous"></script>
   <!-- promise -->
   <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 
-  <!--
-  Credit where credit's due:  https://github.com/martin-honnen/martin-honnen.github.io/blob/master/xslt/
-  -->
-  <script>
+  <!-- <script>
       function loadDoc(url) {
            return new Promise(function(resolve) {
              var req = new XMLHttpRequest();
@@ -75,7 +73,36 @@
       document.addEventListener('DOMContentLoaded', function() {
         transform('resume.xml', 'resume.xsl', {}, document.getElementById('resume'));
       })
-    </script>
+    </script> -->  
+
+
+  <script>
+    // Paths to your XML and XSLT files
+    const xmlUrl = 'resume.xml';
+    const xslUrl = 'resume.xsl';
+
+    // Fetch XML and XSLT files
+    Promise.all([
+      fetch(xmlUrl).then(r => r.text()),
+      fetch(xslUrl).then(r => r.text())
+    ]).then(([xmlText, xslText]) => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(xmlText, "text/xml");
+      const xsl = parser.parseFromString(xslText, "text/xml");
+      // XSLTProcessor is supported in all modern browsers
+      if (window.XSLTProcessor) {
+        const xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        const resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById('result').innerHTML = "";
+        document.getElementById('result').appendChild(resultDocument);
+      } else {
+        document.getElementById('result').innerText = "XSLTProcessor not supported in this browser.";
+      }
+    }).catch(err => {
+      document.getElementById('result').innerText = "Error loading files: " + err;
+    });
+  </script>
 </head>
 
 <body>
