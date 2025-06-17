@@ -15,7 +15,8 @@
       <div class="left-rail">
         <!-- photo -->
         <div class="profile">
-          <img class="profile-photo" src="../images/profile.jfif" alt="Chris Pearson" />
+          <!-- <img class="profile-photo" src="../images/profile.jfif" alt="Chris Pearson" /> -->
+          <img class="profile-photo" src="https://media.licdn.com/dms/image/v2/D4E03AQFygO11vpoUSQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1703251995084?e=1755734400&v=beta&t=0VJQO-Ga2EUhI5MsBJDPAhStrJtbYYXW-aLyy1NqqrY" alt="Chris Pearson" />
         </div>
 
         <!-- info -->
