@@ -17,18 +17,18 @@
   <!-- NTH -->
   <script src="https://unpkg.com/xth/xth.min.js"></script>
 
-  <script>
-    var xml = 'resume.xml';
-    var xsl = 'resume.xsl';
-
-    xth(xml, xsl, function (html) {
-      console.log(html);
-    });
-  </script>
 </head>
 
 <body>
   <div id="resume"></div>
+  <script>
+    var xml = 'path/to/your.xml'; // Path to your XML file
+    var xsl = 'path/to/your.xsl'; // Path to your XSLT file
+
+    xth(xml, xsl, function(html) {
+      document.getElementById('output').innerHTML = html; // 'output' is the ID of your container element
+    });
+  </script>
 </body>
 
 </html>
