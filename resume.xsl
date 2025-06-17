@@ -111,6 +111,7 @@
           <xsl:value-of select="city"/>
         </xsl:otherwise>
       </xsl:choose>
+      <xsl:text> </xsl:text>
       <xsl:value-of select="country/shortName"/>
     </xsl:variable>
     <div class="contact clearfix">
@@ -143,6 +144,7 @@
           <xsl:value-of select="city"/>
         </xsl:otherwise>
       </xsl:choose>
+      <xsl:text> </xsl:text>
       <xsl:value-of select="country/longName"/>
     </xsl:variable>
     <div class="contact clearfix">
