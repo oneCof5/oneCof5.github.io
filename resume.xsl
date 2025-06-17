@@ -104,7 +104,7 @@
           <xsl:value-of select="city"/>
           <xsl:text>, </xsl:text>
           <xsl:value-of select="state"/>
-        <xsl:when>
+        </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="zip"/>
           <xsl:text> </xsl:text>
