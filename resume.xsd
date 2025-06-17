@@ -16,12 +16,18 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="Country">
+    <xs:element name="shortName" type="xs:string"/>
+    <xs:element name="longName" type="xs:string"/>
+  </xs:complexType>
+
   <xs:complexType name="Address">
     <xs:sequence>
       <xs:element name="line" type="xs:string" minOccurs="0" maxOccurs="3"/>
       <xs:element name="city" type="xs:string"/>
       <xs:element name="state" type="xs:string"/>
       <xs:element name="zip" type="xs:string" minOccurs="0"/>
+      <xs:element name="country" type="Country" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 

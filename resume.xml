@@ -3,15 +3,19 @@
 <resume>
 
   <!-- Person -->
-  <person name="Chris Pearson" title="Scrum Master">
+  <person name="Chris Pearson" title="Digital Delivery Manager">
     <address>
-      <line>3072 Glen Valley Drive</line>
+      <line>455 Fennel Road</line>
       <city>Crozet</city>
       <state>VA</state>
       <zip>22932</zip>
+      <country>
+        <shortName>USA</shortName>
+        <longName>United States of America</longName>
+      </country>
     </address>
     <contacts>
-      <contact type="phone">+1 317.750.0439</contact>
+      <contact type="phone">+1 434.443.0491</contact>
       <contact type="email">chris@pearsonpropertyva.com</contact>
       <contact type="linkedin">pearsonc</contact>
       <contact type="github">oneCof5</contact>
@@ -20,6 +24,58 @@
   </person>
 
   <!-- Work History and Experience -->
+  <job title="Digital Delivery Manager">
+    <employer name="Public Library of Science">
+      <address>
+        <line>1875 Mission Street, Suite 103 #188</line>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <zip>94103</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
+      </address>
+      <contacts>
+        <contact type="www">www.plos.org</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2024" month="02"/>
+    </period>
+    <duties>
+      <duty>Champion predictable, reliable and repeatable software delivery across multiple teams and departments. </duty>
+      <duty>Lead multi-disciplinary teams in unified Web of Science search improvement product enhancements (Application Development, Data Science,DevOps and User Experience teams).</duty>
+      <duty>Servant leader to multiple development teams. Facilitate and execute daily scrum, sprint review, sprint retrospective, and sprint planning ceremonies. Collaborate with product and development teams to refine and prioritize the product backlog. Remove impediments. Coach and mentor teams towards an Agile mindset. Accelerate transparency via socialization and communication with external stakeholders.</duty>
+    </duties>
+  </job>
+  <job title="Lead Delivery Manager">
+    <employer name="Clarivate">
+      <address>
+        <line>70 St. Mary Ave</line>
+        <city>London</city>
+        <state></state>
+        <zip>EC31 8BE</zip>
+        <country>
+          <shortName>UK</shortName>
+          <longName>United Kingdom</longName>
+        </country>
+      </address>
+      <contacts>
+        <contact type="phone">+44 207 433 4000</contact>
+        <contact type="www">www.clarivate.com</contact>
+      </contacts>
+    </employer>
+    <period>
+      <from year="2020" month="09"/>
+      <to year="2024" month="02"/>
+    </period>
+    <duties>
+      <duty>Champion predictable, reliable and repeatable software delivery across multiple teams and departments. </duty>
+      <duty>Lead multi-disciplinary teams in unified Web of Science search improvement product enhancements (Application Development, Data Science,DevOps and User Experience teams).</duty>
+      <duty>Servant leader to multiple development teams. Facilitate and execute daily scrum, sprint review, sprint retrospective, and sprint planning ceremonies. Collaborate with product and development teams to refine and prioritize the product backlog. Remove impediments. Coach and mentor teams towards an Agile mindset. Accelerate transparency via socialization and communication with external stakeholders.</duty>
+    </duties>
+  </job>
   <job title="Solutions Engineer">
     <employer name="Silverchair">
       <address>
@@ -27,14 +83,19 @@
         <city>Charlottesville</city>
         <state>VA</state>
         <zip>22902</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">434-296-6333</contact>
+        <contact type="phone">+1 (434) 296-6333</contact>
         <contact type="www">www.silverchair.com</contact>
       </contacts>
     </employer>
     <period>
       <from year="2019" month="12"/>
+      <to year="2020" month="09"/>
     </period>
     <duties>
       <duty>Develop optimized Silverchair software solutions tailored to a client’s needs. Identify and refine client requirements and desires. Lead technical solution demonstrations. Prepare sales proposals. Close sales and facilitate transition to
@@ -50,9 +111,13 @@
         <city>Charlottesville</city>
         <state>VA</state>
         <zip>22902</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">434-296-6333</contact>
+        <contact type="phone">+1 (434) 296-6333</contact>
         <contact type="www">www.silverchair.com</contact>
       </contacts>
     </employer>
@@ -76,9 +141,13 @@
         <city>Indianapolis</city>
         <state>IN</state>
         <zip>46280</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">317-493-2000</contact>
+        <contact type="phone">+1 (317) 493-2000</contact>
         <contact type="www">www.bcforward.com</contact>
       </contacts>
     </employer>
@@ -98,9 +167,13 @@
         <city>New York</city>
         <state>NY</state>
         <zip>10011</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">646-336-1700</contact>
+        <contact type="phone">+1 (646) 336-1700</contact>
         <contact type="www">www.infor.com</contact>
       </contacts>
     </employer>
@@ -124,9 +197,13 @@
         <city>New York</city>
         <state>NY</state>
         <zip>10011</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">646-336-1700</contact>
+        <contact type="phone">+1 (646) 336-1700</contact>
         <contact type="www">www.infor.com</contact>
       </contacts>
     </employer>
@@ -149,9 +226,13 @@
         <city>New York</city>
         <state>NY</state>
         <zip>10011</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">646-336-1700</contact>
+        <contact type="phone">+1 (646) 336-1700</contact>
         <contact type="www">www.infor.com</contact>
       </contacts>
     </employer>
@@ -172,9 +253,13 @@
         <city>Reston</city>
         <state>VA</state>
         <zip>20190</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">703-707-6900</contact>
+        <contact type="phone">+1 (703) 707-6900</contact>
         <contact type="www">www.nciinc.com</contact>
       </contacts>
     </employer>
@@ -194,9 +279,13 @@
         <city>Reston</city>
         <state>VA</state>
         <zip>20190</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">703-707-6900</contact>
+        <contact type="phone">+1 (703) 707-6900</contact>
         <contact type="www">www.nciinc.com</contact>
       </contacts>
     </employer>
@@ -216,9 +305,13 @@
         <city>Reston</city>
         <state>VA</state>
         <zip>20190</zip>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
-        <contact type="phone">703-707-6900</contact>
+        <contact type="phone">+1 (703) 707-6900</contact>
         <contact type="www">www.nciinc.com</contact>
       </contacts>
     </employer>
@@ -266,6 +359,10 @@
       <address>
         <city>Philadelphia</city>
         <state>PA</state>
+        <country>
+          <shortName>USA</shortName>
+          <longName>United States of America</longName>
+        </country>
       </address>
       <contacts>
         <contact type="www">www.upenn.edu</contact>

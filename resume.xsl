@@ -99,9 +99,19 @@
 
   <xsl:template match="address" mode="short">
     <xsl:variable name="addr">
-      <xsl:value-of select="city"/>
-      <xsl:text>, </xsl:text>
-      <xsl:value-of select="state"/>
+      <xsl:choose>
+        <xsl:when test="country/shortName = 'USA'">
+          <xsl:value-of select="city"/>
+          <xsl:text>, </xsl:text>
+          <xsl:value-of select="state"/>
+        <xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="zip"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="city"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:value-of select="country/shortName"/>
     </xsl:variable>
     <div class="contact clearfix">
       <span class="icon">
@@ -115,13 +125,25 @@
 
   <xsl:template match="address" mode="full">
     <xsl:variable name="addr">
-      <xsl:value-of select="line"/>
-      <xsl:text>, </xsl:text>
-      <xsl:value-of select="city"/>
-      <xsl:text>, </xsl:text>
-      <xsl:value-of select="state"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="zip"/>
+      <xsl:choose>
+        <xsl:when test="country/shortName = 'USA'">
+          <xsl:value-of select="line"/>
+          <xsl:text>, </xsl:text>
+          <xsl:value-of select="city"/>
+          <xsl:text>, </xsl:text>
+          <xsl:value-of select="state"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="zip"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="line"/>
+          <xsl:text>, </xsl:text>
+          <xsl:value-of select="zip"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="city"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:value-of select="country/longName"/>
     </xsl:variable>
     <div class="contact clearfix">
       <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
