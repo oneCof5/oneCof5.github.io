@@ -22,8 +22,8 @@
 <body>
   <div id="resume"></div>
   <script>
-    var xml = 'path/to/your.xml'; // Path to your XML file
-    var xsl = 'path/to/your.xsl'; // Path to your XSLT file
+    var xml = 'resume.xml'; // Path to your XML file
+    var xsl = 'resume.xsl'; // Path to your XSLT file
 
     xth(xml, xsl, function(html) {
       document.getElementById('output').innerHTML = html; // 'output' is the ID of your container element
